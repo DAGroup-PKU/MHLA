@@ -1256,7 +1256,7 @@ a:focus {
 
 /* Video generation charts - side by side layout */
 .video-charts .chart-card {
-  display: flex;
+  /* display: flex; */
   gap: 4rem; /* align spacing with other chart groups */
   align-items: flex-start;
 }
@@ -1286,7 +1286,7 @@ a:focus {
 
 /* Image Classification charts - side by side layout */
 .classification-charts {
-  display: flex;
+  /* display: flex; */
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -1312,7 +1312,7 @@ a:focus {
 
 /* Language Modeling charts - side by side layout */
 .language-modeling-charts {
-  display: flex;
+  /* display: flex; */
   gap: 2rem;
   margin-top: 1rem;
 }
