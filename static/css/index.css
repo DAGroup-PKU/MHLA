@@ -204,7 +204,7 @@ body {
 }
 
 .pipeline-image {
-  width: 85%;
+  width: 100%;
   height: auto;
   border-radius: var(--border-radius);
   box-shadow: none;
@@ -261,12 +261,37 @@ body {
   box-shadow: var(--shadow-md);
   transition: var(--transition);
   text-align: center;
+  position: relative;
 }
 
 .performance-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary-color);
+}
+
+.clickable-card {
+  cursor: pointer;
+}
+
+.clickable-card:hover {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.02) 0%, rgba(240, 147, 251, 0.02) 100%);
+}
+
+.card-jump-hint {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  opacity: 0.7;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.clickable-card:hover .card-jump-hint {
+  opacity: 1;
+  color: var(--primary-color);
 }
 
 .performance-card-title {
@@ -434,6 +459,7 @@ body {
   font-weight: 700;
   /* background: rgba(37, 99, 235, 0.08); */
   padding: 0 4px;
+  margin: 0rem 0rem -1.5rem 0rem;
   border-radius: 4px;
 }
 
@@ -559,7 +585,7 @@ body {
 /* Modern Video and Carousel Styling */
 .publication-video {
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 0;
     padding-bottom: 56.25%;
     overflow: hidden;
@@ -1169,7 +1195,7 @@ a:focus {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin: 0.5rem 0 1rem;
+  margin: 0.5rem 0 2rem;
 }
 
 .bar-row {
@@ -1179,7 +1205,19 @@ a:focus {
   gap: 12px;
 }
 
+.bar-row-slim {
+  display: grid;
+  grid-template-columns: 90px 1fr 60px;
+  align-items: center;
+  gap: 6px;
+}
+
 .bar-label {
+  font-weight: 600;
+  width: 7rem;
+}
+
+.bar-label-slim {
   font-weight: 600;
 }
 
@@ -1206,4 +1244,102 @@ a:focus {
 }
 
 .fid-chart .bar-fill { --scale: 80; }
-.fid-title { margin-top: 0.5rem; }
+/* .fid-title { margin-top: 0rem; } */
+
+/* Chart divider line */
+.chart-divider {
+  height: 1px;
+  background: #d1d5db;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+/* Video generation charts - side by side layout */
+.video-charts .chart-card {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.video-chart-half {
+  flex: 1;
+  min-width: 0;
+}
+
+.video-bar-chart {
+  margin: 0.5rem 0 0.5rem;
+}
+
+.video-bar-chart .bar-fill {
+  --scale: 100;
+}
+
+.latency-chart .bar-fill {
+  --scale: 150;
+}
+
+@media screen and (max-width: 768px) {
+  .video-charts .chart-card {
+    flex-direction: column;
+  }
+}
+
+/* Image Classification charts - side by side layout */
+.classification-charts {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.classification-chart-group {
+  flex: 1;
+  min-width: 0;
+}
+
+.classification-chart-group .bar-chart {
+  margin: 0rem 0;
+}
+
+.classification-bar-chart .bar-fill {
+  --scale: 30;
+}
+
+@media screen and (max-width: 768px) {
+  .classification-charts {
+    flex-direction: column;
+  }
+}
+
+/* Language Modeling charts - side by side layout */
+.language-modeling-charts {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.lm-chart-half {
+  flex: 1;
+  min-width: 0;
+}
+
+.lm-bar-chart {
+  margin: 0.5rem 0;
+}
+
+.lm-bar-chart .bar-fill {
+  --scale: 5;
+}
+
+.longbench-chart .bar-fill {
+  --scale: 2.5;
+}
+
+.lm-bar-chart .bar-label {
+  font-size: 0.85rem;
+}
+
+@media screen and (max-width: 768px) {
+  .language-modeling-charts {
+    flex-direction: column;
+  }
+}

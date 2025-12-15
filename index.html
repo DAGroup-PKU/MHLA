@@ -285,8 +285,8 @@
 <section class="section pipeline-section">
   <div class="container is-max-desktop">
     <div class="pipeline-card">
-      <img src="static/images/MHLA_pipeline.png" alt="MHLA pipeline overview" class="pipeline-image" loading="lazy" />
-      <p class="pipeline-caption">Figure: MHLA pipeline overview.</p>
+      <img src="static/images/MHLA_overview.png" alt="MHLA pipeline overview" class="pipeline-image" loading="lazy" />
+      <p class="pipeline-caption">A brief comparison bewtween vanilla linear attention and MHLA.</p>
     </div>
   </div>
 </section>
@@ -301,7 +301,8 @@
     
     <div class="performance-grid">
       <!-- Image Classification -->
-      <div class="performance-card">
+      <div class="performance-card clickable-card" onclick="location.href='#image-classification-section'">
+        <span class="card-jump-hint">Click to view details ↓</span>
         <h3 class="performance-card-title">Image Classification</h3>
         <div class="performance-metrics">
           <div class="metric-item">
@@ -317,7 +318,8 @@
       </div>
 
       <!-- Image Generation -->
-      <div class="performance-card">
+      <div class="performance-card clickable-card" onclick="location.href='#image-generation-section'">
+        <span class="card-jump-hint">Click to view details ↓</span>
         <h3 class="performance-card-title">Image Generation</h3>
         <div class="performance-metrics">
           <div class="metric-item">
@@ -333,7 +335,8 @@
       </div>
 
       <!-- Language Modeling -->
-      <div class="performance-card">
+      <div class="performance-card clickable-card" onclick="location.href='#language-modeling-section'">
+        <span class="card-jump-hint">Click to view details ↓</span>
         <h3 class="performance-card-title">Language Modeling</h3>
         <div class="performance-metrics">
           <div class="metric-item">
@@ -349,7 +352,8 @@
       </div>
 
       <!-- Video Generation -->
-      <div class="performance-card">
+      <div class="performance-card clickable-card" onclick="location.href='#video-generation-section'">
+        <span class="card-jump-hint">Click to view details ↓</span>
         <h3 class="performance-card-title">Video Generation</h3>
         <div class="performance-metrics">
           <div class="metric-item">
@@ -422,6 +426,10 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">About MHLA</h2>
+        <div class="pipeline-card">
+      <img src="static/images/MHLA_pipeline.png" alt="MHLA pipeline overview" class="pipeline-image" loading="lazy" />
+      <!-- <p class="pipeline-caption">A brief comparison bewtween vanilla linear attention and MHLA.</p> -->
+    </div>
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
@@ -435,15 +443,16 @@
 <!-- End paper abstract -->
 
 <!-- Compact Case Gallery -->
-<section class="section case-gallery-section">
+<section id="image-generation-section" class="section case-gallery-section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 performance-title has-text-centered">Image Generation</h2>
     
     <!-- MHLA vs Flash Attention - Speed & FID Chart -->
     <section class="chart-section" aria-label="MHLA vs Flash Attention speed and FID comparison">
       <div class="chart-card">
-        <h3 class="title is-5 has-text-centered">Speed Comparison (Throughput)</h3>
+        <!-- <h3 class="title is-5 has-text-centered">Speed Comparison (Throughput)</h3> -->
         <p class="has-text-centered normal-highlight is-size-6"><span class="title-highlight">8.2× speed up</span> compared with Flash Attention</p>
+        <p class="pipeline-caption"> Speed Comparison (Throughput) </p>
         <div class="bar-chart" role="img" aria-label="Bar chart showing MHLA throughput 7.40 and Flash Attention throughput 0.90">
           <div class="bar-row">
             <span class="bar-label">MHLA</span>
@@ -452,6 +461,7 @@
             </div>
             <span class="bar-value">7.40</span>
           </div>
+          
           <div class="bar-row">
             <span class="bar-label">Flash Attn</span>
             <div class="bar-track">
@@ -460,10 +470,12 @@
             <span class="bar-value">0.90</span>
           </div>
         </div>
-
-        <h3 class="title is-5 has-text-centered fid-title">Quality Comparison (FID↓)</h3>
+        <!-- <div class="chart-divider"></div> -->
+        <!-- <h3 class="title is-5 has-text-centered fid-title">Quality Comparison (FID↓)</h3> -->
         <!-- <p class="has-text-centered is-size-6">Lower is better: MHLA 59.8 vs Flash Attention 68.4</p> -->
         <div class="bar-chart fid-chart" role="img" aria-label="Bar chart showing FID scores: MHLA 59.8 and Flash Attention 68.4 (lower is better)">
+          <p class="has-text-centered normal-highlight is-size-6"><span class="title-highlight">8.6 points</span> better than Flash Attention</p>
+          <p class="pipeline-caption"> Quality Comparison (FID↓) </p>
           <div class="bar-row">
             <span class="bar-label">MHLA</span>
             <div class="bar-track">
@@ -481,6 +493,8 @@
         </div>
       </div>
     </section>
+
+    
 
     <div class="gallery-container">
       <div class="gallery" aria-label="Case image gallery">
@@ -597,10 +611,92 @@
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<section id="video-generation-section" class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
+      <h2 class="title is-3 has-text-centered">Video Generation</h2>
+      
+      <!-- VBench Score & Latency Charts -->
+      <section class="chart-section video-charts" aria-label="Video generation performance comparison">
+        <div class="chart-card">
+          <!-- VBench Score Chart -->
+          <div class="video-chart-half">
+            <p class="has-text-centered normal-highlight is-size-6">
+              <span class="title-highlight">MHLA</span> achieves the same VBench Score as Flash Attention
+            </p>
+            <p class="pipeline-caption">VBench Score Comparison</p>
+            <div class="bar-chart video-bar-chart" role="img" aria-label="VBench Score comparison chart">
+              <div class="bar-row">
+                <span class="bar-label">Wan2.1 1.3B</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 83.31" aria-label="Wan2.1 1.3B VBench Score 83.31"></div>
+                </div>
+                <span class="bar-value">83.31</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Full Linear</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 58.24" aria-label="Full Linear VBench Score 58.24"></div>
+                </div>
+                <span class="bar-value">58.24</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Full MHLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill mhla" style="--value: 82.83" aria-label="Full MHLA VBench Score 82.83"></div>
+                </div>
+                <span class="bar-value">82.83</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Hybrid 2/3 MHLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill mhla" style="--value: 83.82" aria-label="Hybrid 2/3 MHLA VBench Score 83.82"></div>
+                </div>
+                <span class="bar-value">83.82</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Latency Chart -->
+          <div class="video-chart-half">
+            <p class="has-text-centered normal-highlight is-size-6">
+              <span class="title-highlight">2.2× faster</span> than Flash Attention
+            </p>
+            <p class="pipeline-caption">Latency Comparison (Lower is Better)</p>
+            <div class="bar-chart video-bar-chart latency-chart" role="img" aria-label="Latency comparison chart">
+              <div class="bar-row">
+                <span class="bar-label">Wan2.1 1.3B</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 139" aria-label="Wan2.1 1.3B Latency 139s"></div>
+                </div>
+                <span class="bar-value">139s</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Full Linear</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 62" aria-label="Full Linear Latency 62s"></div>
+                </div>
+                <span class="bar-value">62s</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Full MHLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill mhla" style="--value: 62" aria-label="Full MHLA Latency 62s"></div>
+                </div>
+                <span class="bar-value">62s</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Hybrid 2/3 MHLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill mhla" style="--value: 84" aria-label="Hybrid 2/3 MHLA Latency 84s"></div>
+                </div>
+                <span class="bar-value">84s</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <!-- TODO: Add poster image for better preview -->
@@ -630,23 +726,218 @@
 <!-- End video carousel -->
 
 
+<!-- Image Classification -->
+<section id="image-classification-section" class="section case-gallery-section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 performance-title has-text-centered">Image Classification</h2>
+    
+    <section class="chart-section" aria-label="Image classification accuracy comparison at different resolutions">
+      <div class="chart-card">
+        <p class="has-text-centered normal-highlight is-size-6">
+          <span class="title-highlight">MHLA outperforms</span> Self Attn across multiple resolutions
+        </p>
+        <p class="pipeline-caption">Accuracy Comparison on DeiT-T (ACC %)</p>
+        
+        <div class="classification-charts">
+          <!-- 224x224 Resolution -->
+          <div class="classification-chart-group">
+            <p class="has-text-centered is-size-6" style="font-weight: 600; margin-bottom: 0.5rem;">224×224</p>
+            <div class="bar-chart classification-bar-chart" role="img" aria-label="Accuracy comparison at 224x224 resolution">
+              <div class="bar-row-slim">
+                <span class="bar-label-slim">SA</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 22.2" aria-label="SA 224x224 ACC 72.2"></div>
+                </div>
+                <span class="bar-value">72.2</span>
+              </div>
+              <div class="bar-row-slim">
+                <span class="bar-label-slim">MHLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill mhla" style="--value: 25.8" aria-label="MHLA 224x224 ACC 75.8"></div>
+                </div>
+                <span class="bar-value">75.8</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 384x384 Resolution -->
+          <div class="classification-chart-group">
+            <p class="has-text-centered is-size-6" style="font-weight: 600; margin-bottom: 0.5rem;">384×384</p>
+            <div class="bar-chart classification-bar-chart" role="img" aria-label="Accuracy comparison at 384x384 resolution">
+              <div class="bar-row-slim">
+                <span class="bar-label">SA</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 24.4" aria-label="SA 384x384 ACC 74.4"></div>
+                </div>
+                <span class="bar-value">74.4</span>
+              </div>
+              <div class="bar-row-slim">
+                <span class="bar-label">MHLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill mhla" style="--value: 27.5" aria-label="MHLA 384x384 ACC 77.5"></div>
+                </div>
+                <span class="bar-value">77.5</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 512x512 Resolution -->
+          <div class="classification-chart-group">
+            <p class="has-text-centered is-size-6" style="font-weight: 600; margin-bottom: 0.5rem;">512×512</p>
+            <div class="bar-chart classification-bar-chart" role="img" aria-label="Accuracy comparison at 512x512 resolution">
+              <div class="bar-row">
+                <span class="bar-label">SA</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 25.3" aria-label="SA 512x512 ACC 75.3"></div>
+                </div>
+                <span class="bar-value">75.3</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">MHLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill mhla" style="--value: 28.3" aria-label="MHLA 512x512 ACC 78.3"></div>
+                </div>
+                <span class="bar-value">78.3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+<!-- End Image Classification -->
 
 
+<!-- Language Modeling -->
+<section id="language-modeling-section" class="section case-gallery-section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 performance-title has-text-centered">Language Modeling</h2>
+    
+    <section class="chart-section" aria-label="Language modeling performance comparison">
+      <div class="chart-card">
+        <p class="has-text-centered normal-highlight is-size-6">
+          <span class="title-highlight">MHLA leads</span> in both CSR and LongBench benchmarks
+        </p>
+        
+        <div class="language-modeling-charts">
+          <!-- CSR avg Chart -->
+          <div class="lm-chart-half">
+            <p class="pipeline-caption">CSR Average</p>
+            <div class="bar-chart lm-bar-chart" role="img" aria-label="CSR average comparison">
+              <div class="bar-row">
+                <span class="bar-label">GLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 3.0" aria-label="GLA CSR avg 46.0"></div>
+                </div>
+                <span class="bar-value">46.0</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Transformer++</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 3.8" aria-label="Transformer++ CSR avg 46.8"></div>
+                </div>
+                <span class="bar-value">46.8</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Mamba</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 3.4" aria-label="Mamba CSR avg 46.4"></div>
+                </div>
+                <span class="bar-value">46.4</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Mamba2</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 4.0" aria-label="Mamba2 CSR avg 47.0"></div>
+                </div>
+                <span class="bar-value">47.0</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">GDN</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 3.9" aria-label="GDN CSR avg 46.9"></div>
+                </div>
+                <span class="bar-value">46.9</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">MHLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill mhla" style="--value: 4.1" aria-label="MHLA CSR avg 47.1"></div>
+                </div>
+                <span class="bar-value">47.1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- LongBench avg Chart -->
+          <div class="lm-chart-half">
+            <p class="pipeline-caption">LongBench Average</p>
+            <div class="bar-chart lm-bar-chart longbench-chart" role="img" aria-label="LongBench average comparison">
+              <div class="bar-row">
+                <span class="bar-label">GLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 1.53" aria-label="GLA LongBench avg 6.53"></div>
+                </div>
+                <span class="bar-value">6.53</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Transformer++</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 1.92" aria-label="Transformer++ LongBench avg 6.92"></div>
+                </div>
+                <span class="bar-value">6.92</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Mamba</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 1.97" aria-label="Mamba LongBench avg 6.97"></div>
+                </div>
+                <span class="bar-value">6.97</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">Mamba2</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 1.62" aria-label="Mamba2 LongBench avg 6.62"></div>
+                </div>
+                <span class="bar-value">6.62</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">GDN</span>
+                <div class="bar-track">
+                  <div class="bar-fill flash" style="--value: 1.86" aria-label="GDN LongBench avg 6.86"></div>
+                </div>
+                <span class="bar-value">6.86</span>
+              </div>
+              <div class="bar-row">
+                <span class="bar-label">MHLA</span>
+                <div class="bar-track">
+                  <div class="bar-fill mhla" style="--value: 2.41" aria-label="MHLA LongBench avg 7.41"></div>
+                </div>
+                <span class="bar-value">7.41</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+<!-- End Language Modeling -->
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title is-3 has-text-centered">Paper</h2>
 
-      <!-- TODO: Replace with your poster PDF -->
       <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
           </iframe>
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
@@ -681,8 +972,10 @@
 
           <p>
             <!-- This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. -->
-            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
+            <br>
+            Magic Group | Peking University
           </p>
 
         </div>
