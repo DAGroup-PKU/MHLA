@@ -124,14 +124,6 @@
           "@type": "Organization",
           "name": "INSTITUTION_NAME"
         }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
       }
     ],
     "datePublished": "2024-01-01",
@@ -139,7 +131,7 @@
       "@type": "Organization",
       "name": "CONFERENCE_OR_JOURNAL_NAME"
     },
-    "url": "https://xiwen1.github.io/MHLA-project-page/",
+    "url": "https://dagroup-pku.github.io/MHLA/",
     "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
     "keywords": ["Linear Attention", "Model Architecture", "Efficiency"],
     "abstract": "While the Transformer architecture dominates many fields, its quadratic self-attention complexity hinders its use in large-scale applications. Linear attention offers an efficient alternative, but its direct application often degrades performance, with existing fixes typically re-introducing computational overhead through extra modules (e.g., depthwise separable convolution and few self-attention blocks) that defeat the original purpose. In this work, we identify a key failure mode in these methods: global context collapse, where the model loses representational diversity. To address this, we propose Multi-Head Linear Attention (MHLA), which preserves this diversity by computing attention within divided heads along the token dimension. We prove that MHLA maintains linear complexity while recovering much of the expressive power of softmax attention, and verify its effectiveness across multiple domains, achieving a 3.6% improvement on ImageNet classification, a 12.6% gain in image generation tasks with the same computational complexity and a 2.1% improvement on NLP.",
@@ -173,7 +165,7 @@
     "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
     "sameAs": [
       "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      "https://github.com/xiwen1"
     ]
   }
   </script>
@@ -232,7 +224,7 @@
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf"
+                        <a href="#"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -254,7 +246,7 @@
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/DAGroup-PKU/MHLA" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -372,6 +364,19 @@
   </div>
 </section>
 <!-- End Media Gallery Section -->
+
+<!-- YouTube Video Section -->
+<section class="section youtube-video-section">
+  <div class="container is-max-desktop">
+    <div class="youtube-video-wrapper">
+      <div class="youtube-video-container">
+        <iframe src="https://www.youtube.com/embed/up5TX5ssH6A?si=CTSGve_iJF8CM4d7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <p class="pipeline-caption has-text-centered">Video demonstration of MHLA.</p>
+  </div>
+</section>
+<!-- End YouTube Video Section -->
 
 <!-- MHLA Pipeline -->
 <section class="section pipeline-section">
