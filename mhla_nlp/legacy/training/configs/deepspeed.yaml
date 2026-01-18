@@ -1,0 +1,10 @@
+compute_environment: LOCAL_MACHINE
+distributed_type: DEEPSPEED
+deepspeed_config:
+  deepspeed_config_file: configs/ds_config.json
+  zero3_init_flag: true
+machine_rank: 0
+main_training_function: main
+num_machines: 1
+num_processes: 8
+use_cpu: false

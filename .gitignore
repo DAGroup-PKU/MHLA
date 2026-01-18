@@ -1,0 +1,10 @@
+__pycache__/
+.DS_Store
+.vscode/
+*.pth
+*.pt
+*.db
+*.bin
+*.safetensors
+*.pkl
+*.lock

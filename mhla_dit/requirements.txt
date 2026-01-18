@@ -1,0 +1,9 @@
+# Python >= 3.8 required
+# For PyTorch with CUDA 11.7, install from: https://pytorch.org/get-started/previous-versions/
+# Example: pip install torch==1.13.0+cu117 torchvision==0.14.0+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
+torch>=1.13.0
+torchvision
+timm
+diffusers
+accelerate
+
