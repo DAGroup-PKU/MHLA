@@ -18,6 +18,8 @@
 
 
 > <sup>1</sup>Peking University  &ensp;  <sup>2</sup>NVIDIA
+> 
+> ICLR 2026
 
 ![MHLA Preview](assets/MHLA_preview.png)
 
@@ -32,6 +34,7 @@ This repository is organized into four sub-projects: [`mhla_dit`](mhla_dit), [`m
 
 
 ## 🔥 News
+* `[2026.01.12]`  🔥 Our paper is accepted by ICLR 2026!
 * `[2026.01.12]`  🔥 Our paper is available at [arxiv](http://arxiv.org/abs/2601.07832).
 * `[2026.01.12]`  🔥 We release the code of MHLA, including training and inference code for image classification, image generation, language modeling, and video generation.
 
