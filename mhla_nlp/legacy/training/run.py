@@ -106,8 +106,8 @@ def main():
         trust_remote_code=True,
         add_bos_token=True,
         add_eos_token=False,
-        force_download=True,
-        local_files_only=False,
+        # force_download=True,
+        # local_files_only=False,
     )
     if tokenizer.pad_token_id is None:
         tokenizer.pad_token = tokenizer.eos_token
