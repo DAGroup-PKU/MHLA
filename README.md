@@ -25,7 +25,7 @@
 
 ![MHLA Overview](assets/MHLA_overview.png)
 
-MHLA is a **universal high-efficiency** linear attention operator. MHLA can be applied to image classification, image generation, language modeling, and video generation tasks, maintaining performance consistent with Flash Attention while achieving significant speed advantages over Flash Attention under long-sequence conditions. For more details, please refer to our [paper](#).
+MHLA is a **universal high-efficiency** linear attention operator. MHLA can be applied to image classification, image generation, language modeling, and video generation tasks, maintaining performance consistent with Flash Attention while achieving significant speed advantages over Flash Attention under long-sequence conditions. For more details, please refer to our [paper](https://arxiv.org/abs/2601.07832).
 
 This repository is organized into four sub-projects: [`mhla_dit`](mhla_dit), [`mhla_image_classification`](mhla_image_classification), [`mhla_nlp`](mhla_nlp), and [`mhla_videogen`](mhla_videogen). Each corresponds to the experimental code for the four tasks presented in our paper. Each sub-project contains its own README.md with detailed instructions.
 
