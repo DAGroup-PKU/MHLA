@@ -34,6 +34,7 @@ This repository is organized into four sub-projects: [`mhla_dit`](mhla_dit), [`m
 
 
 ## 🔥 News
+* `[2026.04.17]`  🔥 We release our training and inference code of text-to-image generation!
 * `[2026.01.26]`  🔥 Our paper is accepted by ICLR 2026!
 * `[2026.01.12]`  🔥 Our paper is available at [arxiv](http://arxiv.org/abs/2601.07832).
 * `[2026.01.12]`  🔥 We release the code of MHLA, including training and inference code for image classification, image generation, language modeling, and video generation.
@@ -51,10 +52,10 @@ https://github.com/user-attachments/assets/25fe11b6-85e8-49a7-8d7d-b56557bb894e
 - [x] Release code of MHLA on DiT
 - [x] Release code of MHLA on NLP
 - [x] Release code of MHLA on ImageNet classification
-- [ ] Release code of MHLA on Sana
+- [x] Release code of MHLA on Sana
 - [x] Release pretrained weights of Wan-MHLA
 - [ ] Release pretrained weights of DiT-MHLA
-- [ ] Release pretrained weights of Sana-MHLA
+- [x] Release pretrained weights of Sana-MHLA
 - [ ] Release pretrained weights of Image Classifcation models with MHLA
 - [ ] Release pretrained weights of language models with MHLA
 
@@ -69,6 +70,7 @@ Please refer to the README.md files in the following sub-projects for detailed i
 - [mhla_image_classification](mhla_image_classification/README.md)
 - [mhla_nlp](mhla_nlp/README.md)
 - [mhla_videogen](mhla_videogen/README.md)
+- [mhla_sana](mhla_sana/README.md)
 
 ## Performance & Efficiency
 
