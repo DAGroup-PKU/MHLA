@@ -1,7 +1,7 @@
 <div align="center">
 <img width="200" alt="MHLA_logo" src="https://github.com/user-attachments/assets/b9d7a8f9-2de0-4709-80db-2ffe66e68abb" />
   
-## MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head
+## [ICLR 2026🔥] MHLA: Restoring Expressivity of Linear Attention via Token-Level Multi-Head
 
 <a href="https://arxiv.org/abs/2601.07832"><img src="https://img.shields.io/badge/Arxiv-2601.07832-b31b1b.svg?logo=arXiv"></a> &ensp;
 <a href="https://dagroup-pku.github.io/MHLA/"><img src="https://img.shields.io/static/v1?label=Project&message=Page&color=blue&logo=github-pages"></a> &ensp;
