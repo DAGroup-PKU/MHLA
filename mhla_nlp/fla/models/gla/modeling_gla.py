@@ -23,7 +23,7 @@ from fla.modules import GatedMLP as GLAMLP
 from fla.modules import RMSNorm
 from fla.modules.l2warp import l2_warp
 
-from fla.layers.mhla import MHLA, MHLA_with_rotary
+from fla.layers.mhla import MHLA
 
 if TYPE_CHECKING:
     from transformers.processing_utils import Unpack
